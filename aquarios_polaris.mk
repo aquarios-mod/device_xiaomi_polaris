@@ -6,11 +6,16 @@
 
 $(call inherit-product, device/xiaomi/polaris/device.mk)
 
-# Inherit some common AICP stuff.
-$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
+# Inherit some common aquarios stuff.
+$(call inherit-product, vendor/aquarios/config/common_full_phone.mk)
+#$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2160
+TARGET_SCREEN_WIDTH := 1080
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aicp_polaris
+PRODUCT_NAME := aquarios_polaris
 PRODUCT_DEVICE := polaris
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi MIX 2S
@@ -24,7 +29,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="polaris"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-# AICP Device Maintainers
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    DEVICE_MAINTAINERS="Michele B (Miccia)"

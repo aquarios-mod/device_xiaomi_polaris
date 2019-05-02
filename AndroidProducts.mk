@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aicp_polaris.mk
+    $(LOCAL_DIR)/aquarios_polaris.mk
